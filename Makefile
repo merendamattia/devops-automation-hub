@@ -16,10 +16,10 @@ setup: deps hook
 ##  deps	to install Python dependencies
 deps:
 	@echo "🔄 Upgrading pip and installing Python requirements..."
-	python3 -m pip install --upgrade pip
-	python3 -m pip install -r requirements.txt
+	python -m pip install --upgrade pip
+	python -m pip install -r requirements.txt
 
 ##  hook	to install pre-commit commit-msg hook
 hook:
 	@echo "🔨 Installing pre-commit commit-msg hook..."
-	python3 -m pre_commit install -t commit-msg
+	pre-commit install -t commit-msg
