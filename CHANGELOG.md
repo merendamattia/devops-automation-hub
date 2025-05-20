@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/merendamattia/github-action/compare/v1.0.0...v1.1.0) (2025-05-20)
+
+
+### Features
+
+* add Conventional Commits Check workflow ([f327a10](https://github.com/merendamattia/github-action/commit/f327a10d81c8833b8bd0049c07a6e5bbb225b058))
+
 # 1.0.0 (2025-05-19)
 
 
