@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/merendamattia/github-action/compare/v1.1.0...v1.1.1) (2025-06-02)
+
+
+### Bug Fixes
+
+* add develop branch to conventional commits check triggers ([1326280](https://github.com/merendamattia/github-action/commit/13262808401768aa594ca0c6cad0a1ce3de016b5))
+
 # [1.1.0](https://github.com/merendamattia/github-action/compare/v1.0.0...v1.1.0) (2025-05-20)
 
 
