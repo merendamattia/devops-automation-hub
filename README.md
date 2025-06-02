@@ -13,3 +13,4 @@ make setup
 3. [Git Semantic Release](https://dev.to/sahanonp/how-to-setup-semantic-release-with-github-actions-31f3) using [action-for-semantic-release](https://github.com/marketplace/actions/action-for-semantic-release).
 4. Auto Assign Pull Request by [kentaro-m/auto-assign-action](https://github.com/kentaro-m/auto-assign-action/tree/v2.0.0/).
 5. Check Docker Image building.
+6. Check LaTeX document building by [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action/tree/v3/).
