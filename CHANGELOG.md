@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/merendamattia/github-action/compare/v1.4.0...v1.5.0) (2025-06-02)
+
+
+### Features
+
+* add Apache License 2.0 ([6dfaefe](https://github.com/merendamattia/github-action/commit/6dfaefe04b5b8d16714727163ffa8cd57b73e5a4))
+
 # [1.4.0](https://github.com/merendamattia/github-action/compare/v1.3.0...v1.4.0) (2025-06-02)
 
 
