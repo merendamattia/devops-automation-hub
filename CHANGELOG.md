@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/merendamattia/github-action/compare/v1.3.0...v1.4.0) (2025-06-02)
+
+
+### Features
+
+* add workflow to check LaTeX document building and include sample document ([015e4ab](https://github.com/merendamattia/github-action/commit/015e4ab12af9bba63d9c3a599dd5778f16d701d5))
+
 # [1.3.0](https://github.com/merendamattia/github-action/compare/v1.2.0...v1.3.0) (2025-06-02)
 
 
