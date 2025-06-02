@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/merendamattia/github-action/compare/v1.2.0...v1.3.0) (2025-06-02)
+
+
+### Features
+
+* add Docker image building workflow ([f8f0599](https://github.com/merendamattia/github-action/commit/f8f05996b64c34a1a4023e87cb6f4a7f9f3d9e75))
+* add Docker image run step to check workflow ([0b9e347](https://github.com/merendamattia/github-action/commit/0b9e34700d6c31707e49120710a51c777cfd6cd8))
+
 # [1.2.0](https://github.com/merendamattia/github-action/compare/v1.1.1...v1.2.0) (2025-06-02)
 
 
