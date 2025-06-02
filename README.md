@@ -11,3 +11,4 @@ make setup
 1. [Git Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13) using [pre-commit](https://pre-commit.com/).
 2. Git Conventional Commits check using [pre-commit](https://pre-commit.com/).
 3. [Git Semantic Release](https://dev.to/sahanonp/how-to-setup-semantic-release-with-github-actions-31f3) using [action-for-semantic-release](https://github.com/marketplace/actions/action-for-semantic-release).
+4. Auto Assign Pull Request by [kentaro-m/auto-assign-action](https://github.com/kentaro-m/auto-assign-action/tree/v2.0.0/).
