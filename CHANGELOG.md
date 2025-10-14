@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.0...v1.6.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* update README and remove Makefile for streamlined setup instructions ([30869b7](https://github.com/merendamattia/devops-automation-hub/commit/30869b7737e19f1f808b5267093c843f4e0e73d0))
+* update README to include pip upgrade command in setup instructions ([2648122](https://github.com/merendamattia/devops-automation-hub/commit/2648122e846aa7d23b538738eaab30f47fe24ee9))
+
 # [1.6.0](https://github.com/merendamattia/github-action/compare/v1.5.0...v1.6.0) (2025-10-14)
 
 
