@@ -20,7 +20,7 @@ jobs:
       - name: Check conventional commits
         uses: webiny/action-conventional-commits@v1.3.0
         with:
-          allowed-commit-types: "feat,fix,docs,style,refactor,test,chore,ci,build,perf"
+          allowed-commit-types: "feat,fix,docs,style,refactor,test,chore,ci,build,perf,ops,merge,revert"
 
   pre-commit:
     name: Pre-commit checks
