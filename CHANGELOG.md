@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.2...v1.6.3) (2025-10-14)
+
+
+### Bug Fixes
+
+* update push branches to include master in conventional commits check ([f9bddef](https://github.com/merendamattia/devops-automation-hub/commit/f9bddef88b2b9dea9b48cbeda190e6d0d4830702))
+
 ## [1.6.2](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.1...v1.6.2) (2025-10-14)
 
 
