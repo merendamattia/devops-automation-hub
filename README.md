@@ -11,6 +11,7 @@ A customizable GitHub Actions setup to streamline and automate development workf
 
 Full environment setup:
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 pre-commit install
 pre-commit install --hook-type commit-msg
