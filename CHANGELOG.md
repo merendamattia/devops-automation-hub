@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/merendamattia/github-action/compare/v1.5.0...v1.6.0) (2025-10-14)
+
+
+### Features
+
+* expand allowed commit types for conventional commits and update commit types in configuration ([bc6f7fc](https://github.com/merendamattia/github-action/commit/bc6f7fc357bac85794164f99862c8537cab6b5bd))
+
 # [1.5.0](https://github.com/merendamattia/github-action/compare/v1.4.0...v1.5.0) (2025-06-02)
 
 
