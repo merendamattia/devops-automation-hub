@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.1...v1.6.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* enable skipKeywords in auto-assign configuration ([5315447](https://github.com/merendamattia/devops-automation-hub/commit/53154475206bf80a0dfca2ee98922ea2c3d90e46))
+
 ## [1.6.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.0...v1.6.1) (2025-10-14)
 
 
