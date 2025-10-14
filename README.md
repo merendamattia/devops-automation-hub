@@ -1,22 +1,24 @@
-# merendamattia/github-action
+# merendamattia/devops-automation-hub
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Latest Release](https://img.shields.io/github/v/release/merendamattia/github-action?label=release)](https://github.com/merendamattia/github-action/releases)
+[![Latest Release](https://img.shields.io/github/v/release/merendamattia/devops-automation-hub?label=release)](https://github.com/merendamattia/devops-automation-hub/releases)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/check-docker-image.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/check-latex-document.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/conventional-commits-check.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/semantic-release.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 
-[![Actions Status](https://github.com/merendamattia/github-action/actions/workflows/check-docker-image.yaml/badge.svg)](https://github.com/merendamattia/github-action/actions)
-[![Actions Status](https://github.com/merendamattia/github-action/actions/workflows/check-latex-document.yaml/badge.svg)](https://github.com/merendamattia/github-action/actions)
-[![Actions Status](https://github.com/merendamattia/github-action/actions/workflows/conventional-commits-check.yaml/badge.svg)](https://github.com/merendamattia/github-action/actions)
-[![Actions Status](https://github.com/merendamattia/github-action/actions/workflows/semantic-release.yaml/badge.svg)](https://github.com/merendamattia/github-action/actions)
-
-
-A customizable GitHub Actions setup to streamline and automate development workflows. Includes a Makefile for easy usage and integration.
-
-Run `make` or `make help` to display this list of targets and their descriptions.
+A customizable GitHub Actions setup to streamline and automate development workflows.
 
 Full environment setup:
 ```bash
-make setup
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pre-commit install
+pre-commit install --hook-type commit-msg
 ```
+
+## Semantic Release Setup
+To use semantic release, create a GitHub token (`GH_TOKEN`) with repo permissions and add it as a repository secret named `GH_TOKEN`.
 
 ## Action supported
 1. Git Conventional Commits check using [pre-commit](https://pre-commit.com/).
@@ -26,7 +28,6 @@ make setup
 5. Check LaTeX document building by [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action/tree/v3/).
 
 ## Contributors
-
-<a href="https://github.com/merendamattia/github-action/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=merendamattia/github-action" />
+<a href="https://github.com/merendamattia/devops-automation-hub/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=merendamattia/devops-automation-hub" />
 </a>
