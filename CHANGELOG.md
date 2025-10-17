@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.7.0...v1.7.1) (2025-10-17)
+
+
+### Bug Fixes
+
+* update README to include Docker release setup instructions ([77bd38e](https://github.com/merendamattia/devops-automation-hub/commit/77bd38ef83fac32775f5292ae166ca0d8bca4c8c))
+
 # [1.7.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.3...v1.7.0) (2025-10-17)
 
 
