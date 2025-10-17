@@ -9,7 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  publish:
+  release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     env:
       DOCKERHUB_REPO: ${{ secrets.DOCKERHUB_REPO }}
@@ -35,7 +36,7 @@ jobs:
           if [ -z "$TAG" ]; then
             # ensure tags are fetched
             git fetch --tags --quiet
-            TAG=$(git for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | head -n1)
+            TAG=$(git for-each-ref --sort=-version:refname --format '%(refname:short)' refs/tags | head -n1)
           fi
 
           # 3) fallback to HEAD_BRANCH if present
