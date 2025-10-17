@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.3...v1.7.0) (2025-10-17)
+
+
+### Bug Fixes
+
+* improve tag determination logic in Docker publish workflow ([a13fcc7](https://github.com/merendamattia/devops-automation-hub/commit/a13fcc74953fc73f94db88f2fdea311f873f0748))
+* specify Dockerfile location in build context for Docker image ([e16cc88](https://github.com/merendamattia/devops-automation-hub/commit/e16cc88dba4a5e519bd64041ba118c6fd5835667))
+* update workflow name for clarity in Docker publish process ([0f83108](https://github.com/merendamattia/devops-automation-hub/commit/0f83108858f871178209e21265553a738323fc7b))
+
+
+### Features
+
+* add Docker publish workflow for automated image builds and pushes ([ac66064](https://github.com/merendamattia/devops-automation-hub/commit/ac66064ecfb287a0908e6c20e98b842d858ab979))
+
 ## [1.6.3](https://github.com/merendamattia/devops-automation-hub/compare/v1.6.2...v1.6.3) (2025-10-14)
 
 
