@@ -6,6 +6,7 @@
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/check-latex-document.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/conventional-commits-check.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/semantic-release.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 
 A customizable GitHub Actions setup to streamline and automate development workflows.
 
