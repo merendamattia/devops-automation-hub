@@ -20,12 +20,19 @@ pre-commit install --hook-type commit-msg
 ## Semantic Release Setup
 To use semantic release, create a GitHub token (`GH_TOKEN`) with repo permissions and add it as a repository secret named `GH_TOKEN`.
 
+## Docker Release Setup
+To auto-build and push the Docker image after Semantic Release, add repository secrets:
+- `DOCKERHUB_USERNAME`: your docker username;
+- `DOCKERHUB_TOKEN`: your personal access token (PAT);
+- `DOCKERHUB_REPO`: the Docker Hub repository (format: username/repo).
+
 ## Action supported
 1. Git Conventional Commits check using [pre-commit](https://pre-commit.com/).
 2. [Git Semantic Release](https://dev.to/sahanonp/how-to-setup-semantic-release-with-github-actions-31f3) using [action-for-semantic-release](https://github.com/marketplace/actions/action-for-semantic-release).
 3. Auto Assign Pull Request by [kentaro-m/auto-assign-action](https://github.com/kentaro-m/auto-assign-action/tree/v2.0.0/).
 4. Check Docker Image building.
 5. Check LaTeX document building by [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action/tree/v3/).
+6. Build and push docker image to Docker Hub.
 
 ## Contributors
 <a href="https://github.com/merendamattia/devops-automation-hub/graphs/contributors">
