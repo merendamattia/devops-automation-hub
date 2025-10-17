@@ -1,0 +1,54 @@
+name: Docker Publish (simple)
+on:
+  workflow_run:
+    workflows: ["Semantic Release"]
+    types: [completed]
+  push:
+    branches: [deploy-on-docker-hub]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      DOCKERHUB_REPO: ${{ secrets.DOCKERHUB_REPO }}
+      HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+    steps:
+      - name: Checkout the repo at workflow run commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Determine tag to use
+        id: determine_tag
+        run: |
+          # Prefer a tag pointing to the checked-out commit
+          TAG=$(git tag --points-at HEAD | head -n1)
+          if [ -z "$TAG" ]; then
+            # fallback to head branch name (may be v1.2.3 if semantic-release pushed a branch/tag)
+            TAG="$HEAD_BRANCH"
+          fi
+          if [ -z "$TAG" ]; then
+            echo "No tag found; failing"
+            exit 1
+          fi
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        env:
+          DOCKERHUB_REPO: ${{ env.DOCKERHUB_REPO }}
+          TAG: ${{ steps.determine_tag.outputs.tag }}
+        run: |
+          echo "Building $DOCKERHUB_REPO:$TAG"
+          docker build -t "$DOCKERHUB_REPO:$TAG" .
+          docker push "$DOCKERHUB_REPO:$TAG"
