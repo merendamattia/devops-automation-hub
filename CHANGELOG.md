@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.7.1...v1.8.0) (2025-10-18)
+
+
+### Features
+
+* update Docker workflow to use Buildx for multi-architecture image builds ([b17d8df](https://github.com/merendamattia/devops-automation-hub/commit/b17d8df4d019fef180ebcd7fdf8c5fb958b335ef))
+
 ## [1.7.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.7.0...v1.7.1) (2025-10-17)
 
 
