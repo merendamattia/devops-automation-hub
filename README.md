@@ -15,7 +15,7 @@ Full environment setup:
 pip install -r requirements.txt
 ```
 
-## Action supported
+## Actions supported
 1. Git Conventional Commits check using [pre-commit](https://pre-commit.com/).
 2. [Git Semantic Release](https://dev.to/sahanonp/how-to-setup-semantic-release-with-github-actions-31f3) using [action-for-semantic-release](https://github.com/marketplace/actions/action-for-semantic-release).
 3. Auto Assign Pull Request by [kentaro-m/auto-assign-action](https://github.com/kentaro-m/auto-assign-action/tree/v2.0.0/).
