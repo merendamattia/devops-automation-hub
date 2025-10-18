@@ -69,13 +69,12 @@ Follow these two steps to enable automatic assignment and allow Actions to creat
       "parameters": {
         "required_approving_review_count": 1,
         "dismiss_stale_reviews_on_push": false,
-        "require_code_owner_review": false,
+        "require_code_owner_review": true,
         "require_last_push_approval": false,
-        "required_review_thread_resolution": false,
-        "automatic_copilot_code_review_enabled": false,
+        "required_review_thread_resolution": true,
+        "automatic_copilot_code_review_enabled": true,
         "allowed_merge_methods": [
           "merge",
-          "squash",
           "rebase"
         ]
       }
