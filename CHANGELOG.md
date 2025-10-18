@@ -1,3 +1,11 @@
+## [1.8.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.8.0...v1.8.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* remove Copilot from the list of reviewers in auto-assign configuration ([4a7888f](https://github.com/merendamattia/devops-automation-hub/commit/4a7888fd0a3c2571004c0a8ee42e92e0283449c4))
+* update auto-assign configuration to require code owner review and enable automatic Copilot code review ([b3e2eb2](https://github.com/merendamattia/devops-automation-hub/commit/b3e2eb27605883c1a6c2cad5f8f23c006c37d398))
+
 # [1.8.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.7.1...v1.8.0) (2025-10-18)
 
 
