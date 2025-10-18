@@ -12,20 +12,8 @@ A customizable GitHub Actions setup to streamline and automate development workf
 
 Full environment setup:
 ```bash
-python -m pip install --upgrade pip
 pip install -r requirements.txt
-pre-commit install
-pre-commit install --hook-type commit-msg
 ```
-
-## Semantic Release Setup
-To use semantic release, create a GitHub token (`GH_TOKEN`) with repo permissions and add it as a repository secret named `GH_TOKEN`.
-
-## Docker Release Setup
-To auto-build and push the Docker image after Semantic Release, add repository secrets:
-- `DOCKERHUB_USERNAME`: your docker username;
-- `DOCKERHUB_TOKEN`: your personal access token (PAT);
-- `DOCKERHUB_REPO`: the Docker Hub repository (format: username/repo).
 
 ## Action supported
 1. Git Conventional Commits check using [pre-commit](https://pre-commit.com/).
@@ -34,6 +22,95 @@ To auto-build and push the Docker image after Semantic Release, add repository s
 4. Check Docker Image building.
 5. Check LaTeX document building by [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action/tree/v3/).
 6. Build and push docker image to Docker Hub.
+
+## Conventional Commits Hooks setup
+
+This project follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. Please install the Git commit hooks before making commits:
+
+```bash
+pre-commit install
+pre-commit install --hook-type commit-msg
+```
+
+## Auto Assign Pull Request setup
+
+Follow these two steps to enable automatic assignment and allow Actions to create and approve pull requests.
+
+1) Create a new ruleset in your repository: `Settings > Rules > Rulesets` and import the JSON below (do not modify the JSON). To make the file easier to read, the JSON is collapsed by default — click to expand:
+
+<details>
+<summary>Show JSON ruleset (click to expand)</summary>
+
+```json
+{
+  "id": 5813723,
+  "name": "Protect Main",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "merendamattia/devops-automation-hub",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    },
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 1,
+        "dismiss_stale_reviews_on_push": false,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": false,
+        "automatic_copilot_code_review_enabled": false,
+        "allowed_merge_methods": [
+          "merge",
+          "squash",
+          "rebase"
+        ]
+      }
+    },
+    {
+      "type": "copilot_code_review",
+      "parameters": {
+        "review_on_push": true,
+        "review_draft_pull_requests": false
+      }
+    }
+  ],
+  "bypass_actors": [
+    {
+      "actor_id": 5,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    }
+  ]
+}
+```
+
+</details>
+
+2) Grant workflows permission to create and approve PRs: go to `Settings > Actions > General > Workflow permissions`, set *"Read and write permissions"*, and enable *"Allow GitHub Actions to create and approve pull requests"*.
+
+## Semantic Release setup
+To use semantic release, create a GitHub token (`GH_TOKEN`) with repo permissions and add it as a repository secret named `GH_TOKEN`.
+
+## Docker Release setup
+To auto-build and push the Docker image after Semantic Release, add repository secrets:
+- `DOCKERHUB_USERNAME`: your docker username;
+- `DOCKERHUB_TOKEN`: your personal access token (PAT);
+- `DOCKERHUB_REPO`: the Docker Hub repository (format: username/repo).
+
 
 ## Contributors
 <a href="https://github.com/merendamattia/devops-automation-hub/graphs/contributors">
