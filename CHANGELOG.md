@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.8.1...v1.9.0) (2025-10-24)
+
+
+### Features
+
+* add contributing guidelines and instructions ([5529caf](https://github.com/merendamattia/devops-automation-hub/commit/5529caffb695263dbe8490b45efedf0de1e84f4d))
+* add Contributor Covenant Code of Conduct ([3518cfb](https://github.com/merendamattia/devops-automation-hub/commit/3518cfbd8f46a6d47eebf089eb5cfa4e4dad85b4))
+* add issue templates for bug reports, feature requests, and questions ([b73d4c4](https://github.com/merendamattia/devops-automation-hub/commit/b73d4c422d91bd4365afb5d4b0118f269df9aec5))
+
 ## [1.8.1](https://github.com/merendamattia/devops-automation-hub/compare/v1.8.0...v1.8.1) (2025-10-18)
 
 
