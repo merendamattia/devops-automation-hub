@@ -7,6 +7,7 @@
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/conventional-commits-check.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/semantic-release.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 [![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
+[![Actions Status](https://github.com/merendamattia/devops-automation-hub/actions/workflows/telegram-message.yaml/badge.svg)](https://github.com/merendamattia/devops-automation-hub/actions)
 
 A customizable GitHub Actions setup to streamline and automate development workflows.
 
@@ -22,6 +23,7 @@ pip install -r requirements.txt
 4. Check Docker Image building.
 5. Check LaTeX document building by [xu-cheng/latex-action](https://github.com/xu-cheng/latex-action/tree/v3/).
 6. Build and push docker image to Docker Hub.
+7. Telegram notifications for push events using [appleboy/telegram-action](https://github.com/appleboy/telegram-action).
 
 ## Conventional Commits Hooks setup
 
@@ -109,6 +111,23 @@ To auto-build and push the Docker image after Semantic Release, add repository s
 - `DOCKERHUB_USERNAME`: your docker username;
 - `DOCKERHUB_TOKEN`: your personal access token (PAT);
 - `DOCKERHUB_REPO`: the Docker Hub repository (format: username/repo).
+
+## Telegram Notifications setup
+To receive Telegram notifications on push events, add repository secrets:
+- `TELEGRAM_TOKEN`: your Telegram bot token (create a bot with [@BotFather](https://t.me/BotFather)).
+- `TELEGRAM_TO`: your Telegram chat ID.
+
+### Getting your Telegram chat ID
+
+1. Send a message to your bot (or to a group where the bot is added).
+2. Run this command (replace `<your-bot-token>` with your actual token):
+   ```bash
+   curl https://api.telegram.org/bot\<your-bot-token>/getUpdates
+   ```
+3. Look for the `"id"` field under `"chat"` in the JSON response. This is your chat ID (e.g., `"id": 65382999`)
+4. Add this ID as the `TELEGRAM_TO` secret in your repository.
+
+The workflow sends formatted notifications with author, repository, branch, and commit message details.
 
 
 ## Contributors
