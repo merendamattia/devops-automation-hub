@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.9.0...v1.10.0) (2025-11-16)
+
+
+### Bug Fixes
+
+* update Telegram action version and correct commit message reference ([d6459d6](https://github.com/merendamattia/devops-automation-hub/commit/d6459d65f97d5a1e0b7b914244f2615ffef1ce3e))
+
+
+### Features
+
+* add Telegram message workflow for commit notifications ([e9f095a](https://github.com/merendamattia/devops-automation-hub/commit/e9f095ae5b9270fc00c148b8b15f03718829b7d4))
+
 # [1.9.0](https://github.com/merendamattia/devops-automation-hub/compare/v1.8.1...v1.9.0) (2025-10-24)
 
 
