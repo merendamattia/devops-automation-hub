@@ -1,0 +1,21 @@
+name: 'Telegram message'
+on: [push]
+
+jobs:
+  send-telegram-message:
+    name: Telegram message
+    runs-on: ubuntu-latest
+    steps:
+      - name: Telegram message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
