@@ -11,12 +11,15 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
           message: |
-            @${{ github.actor }} created a new commit.
+            *New Push* 📤
 
-            Commit message: ${{ github.event.commits[0].message }}
+            *Author:* [@${{ github.actor }}](https://github.com/${{ github.actor }})
+            *Repository:* [${{ github.repository }}](https://github.com/${{ github.repository }})
+            *Branch:* [${{ github.ref_name }}](https://github.com/${{ github.repository }}/tree/${{ github.ref_name }})
 
-            Repository: ${{ github.repository }}
-            Branch: ${{ github.ref_name }}
+            *Commit Message:*
+            `${{ github.event.commits[0].message }}`
 
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            [View Changes](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
