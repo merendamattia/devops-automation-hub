@@ -104,7 +104,24 @@ Follow these two steps to enable automatic assignment and allow Actions to creat
 2) Grant workflows permission to create and approve PRs: go to `Settings > Actions > General > Workflow permissions`, set *"Read and write permissions"*, and enable *"Allow GitHub Actions to create and approve pull requests"*.
 
 ## Semantic Release setup
-To use semantic release, create a GitHub token (`GH_TOKEN`) with repo permissions and add it as a repository secret named `GH_TOKEN`.
+To authenticate Semantic Release, create a personal access token (PAT) and save it as the `GH_TOKEN` repository secret.
+
+1. In GitHub, open your account settings and go to `Settings > Developer settings > Personal access tokens`.
+2. Create a **fine-grained personal access token** (recommended):
+   - Select the repository owner.
+   - Under **Repository access**, select **Only select repositories** and choose the repository that will run Semantic Release.
+   - Under **Repository permissions**, grant these permissions:
+     - `Contents`: **Read and write**
+     - `Issues`: **Read and write**
+     - `Pull requests`: **Read and write**
+   - Generate the token and copy it immediately. GitHub displays the token only once.
+3. If you prefer a **classic personal access token**, select the minimum semantic-release GitHub plugin scope for the repository visibility: `public_repo` for a public repository or `repo` for a private repository.
+4. In the target repository, go to `Settings > Secrets and variables > Actions > New repository secret`.
+5. Enter `GH_TOKEN` as the secret name, paste the generated token as the value, and save it.
+
+Never commit or paste the token into repository files, logs, examples, or workflow YAML. If a release reports `Resource not accessible by integration`, verify that the token is stored under the exact `GH_TOKEN` name, is limited to the correct repository, and has the permissions or scope listed above.
+
+For more information, see GitHub's [personal access token documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens), the [fine-grained PAT permissions reference](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens), and the `@semantic-release/github` [authentication documentation](https://github.com/semantic-release/github#github-authentication).
 
 ## Docker Release setup
 To auto-build and push the Docker image after Semantic Release, add repository secrets:
